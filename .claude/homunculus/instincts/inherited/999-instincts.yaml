@@ -1,0 +1,202 @@
+# Instincts generated from https://github.com/kui123456789/999
+# Generated: 2026-03-25T04:49:29.249Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: 999-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Commit Length
+
+## Action
+
+Keep commit messages concise (~19 characters)
+
+## Evidence
+
+- Average commit message length: 19 chars
+- Based on 200 commits
+
+---
+id: 999-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: 999-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: 999-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: 999-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: 999-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: util/*, 示例/角色卡示例/脚本/自动更新角色卡/*, /*
+
+---
+id: 999-workflow-bump-dependencies
+trigger: "when doing bump dependencies"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Bump Dependencies
+
+## Action
+
+Follow the bump-dependencies workflow:
+1. Update package.json and pnpm-lock.yaml to new dependency versions
+2. Update relevant @types/*.d.ts files if type packages are bumped
+3. Optionally update tavern_sync.mjs if related to dependency changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: package.json, pnpm-lock.yaml, @types/function/*.d.ts
+
+---
+id: 999-workflow-bundle-dist-assets
+trigger: "when doing bundle dist assets"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Bundle Dist Assets
+
+## Action
+
+Follow the bundle-dist-assets workflow:
+1. Build or bundle source code/assets
+2. Output results to dist/ directory (e.g., .js, .js.map, .html)
+3. Optionally update related example images or files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: dist/角色卡示例/界面/状态栏/index.html, dist/角色卡示例/界面/状态栏/index.js.map, dist/角色卡示例/脚本/自动更新角色卡/index.js
+
+---
+id: 999-workflow-update-example-or-doc-files
+trigger: "when doing update example or doc files"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Update Example Or Doc Files
+
+## Action
+
+Follow the update-example-or-doc-files workflow:
+1. Edit or add files in 示例/ (examples) or 初始模板/ (templates)
+2. Update .md, .yaml, .vue, .png, or .txt files as needed
+3. Optionally update related files in dist/ if assets are rebuilt
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: 示例/角色卡示例/*, 示例/前端界面示例/*, 初始模板/角色卡/*
+
