@@ -1,0 +1,476 @@
+# Instincts generated from https://github.com/kui123456789/999
+# Generated: 2026-04-02T04:57:55.699Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: 999-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Commit Length
+
+## Action
+
+Keep commit messages concise (~18 characters)
+
+## Evidence
+
+- Average commit message length: 18 chars
+- Based on 200 commits
+
+---
+id: 999-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: 999-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: 999-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: 999-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: 999-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: util/*, 示例/角色卡示例/脚本/自动更新角色卡/*, /*
+
+---
+id: 999-workflow-dependency-bump
+trigger: "when doing dependency bump"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Dependency Bump
+
+## Action
+
+Follow the dependency-bump workflow:
+1. Update package.json and pnpm-lock.yaml with new dependency versions.
+2. Update one or more @types/function/*.d.ts or @types/iframe/*.d.ts files as needed.
+3. Optionally update tavern_sync.mjs if related to type or dependency changes.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: package.json, pnpm-lock.yaml, @types/function/*.d.ts
+
+---
+id: 999-workflow-bot-bundle-dist
+trigger: "when doing bot bundle dist"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Bot Bundle Dist
+
+## Action
+
+Follow the bot-bundle-dist workflow:
+1. Build the project to generate updated dist files (HTML, JS, maps, etc).
+2. Commit the new or changed files in dist/ directory.
+3. Optionally include updated example assets (e.g., images, YAMLs) if relevant.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: dist/角色卡示例/界面/状态栏/index.html, dist/角色卡示例/界面/状态栏/index.js.map, dist/角色卡示例/脚本/自动更新角色卡/index.js
+
+---
+id: 999-workflow-example-content-update
+trigger: "when doing example content update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Example Content Update
+
+## Action
+
+Follow the example-content-update workflow:
+1. Edit or add files under 示例/角色卡示例/ or related example directories.
+2. Update YAML, markdown, or image files to reflect new examples or corrections.
+3. Optionally update related scripts or documentation.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: 示例/角色卡示例/*.yaml, 示例/角色卡示例/*.md, 示例/角色卡示例/*.png
+
+---
+id: 999-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct File Naming
+
+## Action
+
+Use PascalCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Files in srcLayout and commonFolders
+
+---
+id: 999-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- TypeScript code examples
+
+---
+id: 999-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: 999-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: 999-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+- TypeScript code examples
+
+---
+id: 999-instinct-export-style
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: 999-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Test Location
+
+## Action
+
+Place tests in a separate directory from source code
+
+## Evidence
+
+- architecture.testLocation is 'separate'
+
+---
+id: 999-instinct-test-pattern
+trigger: "When implementing a new feature"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Test Pattern
+
+## Action
+
+Add corresponding tests after feature implementation
+
+## Evidence
+
+- feature-development workflow commitSequence includes 'Add tests for feature'
+
+---
+id: 999-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a conventional prefix (e.g., feat, fix, chore, ci, style, [bot])
+
+## Evidence
+
+- commits.prefixes
+- Examples: 'feat: ...', 'fix: ...', '[bot] ...'
+
+---
+id: 999-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Commit Length
+
+## Action
+
+Keep the commit message concise (around 18 characters on average)
+
+## Evidence
+
+- commits.averageLength is 18
+- Examples of short commit messages
+
+---
+id: 999-instinct-dependency-bump
+trigger: "When dependencies or type definitions need to be updated"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Dependency Bump
+
+## Action
+
+Update package.json, pnpm-lock.yaml, and relevant @types/*.d.ts files; optionally update tavern_sync.mjs
+
+## Evidence
+
+- dependency-bump workflow
+- Commits updating package.json, pnpm-lock.yaml, @types files
+
+---
+id: 999-instinct-bot-bundle-dist
+trigger: "When source code or assets change requiring a new build"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Bot Bundle Dist
+
+## Action
+
+Regenerate and commit built files in dist/ and optionally update example assets
+
+## Evidence
+
+- bot-bundle-dist workflow
+- Commits with '[bot] bundle', changes in dist/
+
+---
+id: 999-instinct-example-content-update
+trigger: "When example/demo content needs to be added or corrected"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Example Content Update
+
+## Action
+
+Edit or add files under 示例/角色卡示例/ and update YAML, markdown, or image files
+
+## Evidence
+
+- example-content-update workflow
+- Commits editing 示例/角色卡示例/*.yaml, *.md, *.png
+
+---
+id: 999-instinct-feature-dev-sequence
+trigger: "When developing a new feature"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Instinct Feature Dev Sequence
+
+## Action
+
+Implement the feature, add tests, then update documentation in sequence
+
+## Evidence
+
+- feature-development workflow commitSequence: implementation → tests → docs
+
