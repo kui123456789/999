@@ -1,0 +1,531 @@
+# Instincts generated from https://github.com/kui123456789/999
+# Generated: 2026-04-04T04:46:12.412Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: 999-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Commit Length
+
+## Action
+
+Keep commit messages concise (~17 characters)
+
+## Evidence
+
+- Average commit message length: 17 chars
+- Based on 75 commits
+
+---
+id: 999-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: 999-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: 999-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: 999-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: /*, util/*, 示例/角色卡示例/脚本/自动更新角色卡/*
+
+---
+id: 999-workflow-bump-dependencies
+trigger: "when doing bump dependencies"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Bump Dependencies
+
+## Action
+
+Follow the bump-dependencies workflow:
+1. Update one or more @types/* .d.ts files and/or tavern_sync.mjs
+2. Update package.json and pnpm-lock.yaml
+3. Commit with message containing 'Bump deps' or similar
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: package.json, pnpm-lock.yaml, tavern_sync.mjs
+
+---
+id: 999-workflow-bot-bundle-artifacts
+trigger: "when doing bot bundle artifacts"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Bot Bundle Artifacts
+
+## Action
+
+Follow the bot-bundle-artifacts workflow:
+1. Build project to generate dist/ files
+2. Commit updated dist/ files (e.g., .js, .js.map, .html, .png)
+3. Use commit message '[bot] bundle'
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: dist/角色卡示例/界面/状态栏/index.html, dist/角色卡示例/界面/状态栏/index.js.map, dist/角色卡示例/界面/状态栏/main.css.map
+
+---
+id: 999-workflow-update-example-character-card
+trigger: "when doing update example character card"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Update Example Character Card
+
+## Action
+
+Follow the update-example-character-card workflow:
+1. Edit or add files in 示例/角色卡示例/ (YAML, PNG, scripts)
+2. Optionally update util/common.ts or related scripts
+3. Commit changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: 示例/角色卡示例/index.yaml, 示例/角色卡示例/角色卡示例.png, 示例/角色卡示例/脚本/自动更新角色卡/index.ts
+
+---
+id: 999-workflow-update-build-config
+trigger: "when doing update build config"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Update Build Config
+
+## Action
+
+Follow the update-build-config workflow:
+1. Edit webpack.config.ts or .github/workflows/bundle.yaml
+2. Commit changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: webpack.config.ts, .github/workflows/bundle.yaml
+
+---
+id: 999-workflow-update-prompt-or-rule-docs
+trigger: "when doing update prompt or rule docs"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kui123456789/999
+---
+
+# 999 Workflow Update Prompt Or Rule Docs
+
+## Action
+
+Follow the update-prompt-or-rule-docs workflow:
+1. Edit .cursor/rules/*.mdc or similar rule/prompt files
+2. Optionally update other .augment, .clinerules, .kilocode, .roo files
+3. Commit changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .cursor/rules/*.mdc, .augment/rules/*.md, .clinerules/*.md
+
+---
+id: 999-coding-file-naming
+trigger: "When creating or renaming files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Coding File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Consistent file naming in src and util folders
+
+---
+id: 999-coding-function-naming
+trigger: "When defining functions"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Coding Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- TypeScript code examples
+
+---
+id: 999-coding-class-naming
+trigger: "When defining classes"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Coding Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+- TypeScript code examples
+
+---
+id: 999-coding-constant-naming
+trigger: "When defining constants"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Coding Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+- TypeScript code examples
+
+---
+id: 999-coding-import-style
+trigger: "When importing modules"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Coding Import Style
+
+## Action
+
+Use absolute import paths
+
+## Evidence
+
+- Pattern in importStyle
+- TypeScript code examples
+
+---
+id: 999-coding-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Coding Export Style
+
+## Action
+
+Use mixed export style (default and named exports as appropriate)
+
+## Evidence
+
+- Pattern in exportStyle
+- TypeScript code examples
+
+---
+id: 999-testing-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Testing Location
+
+## Action
+
+Place tests in a separate test location outside src
+
+## Evidence
+
+- Pattern in architecture.testLocation
+- No tests in srcLayout
+
+---
+id: 999-testing-feature-sequence
+trigger: "When implementing a new feature"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Testing Feature Sequence
+
+## Action
+
+Add tests for the feature after implementation, before documentation update
+
+## Evidence
+
+- feature-development workflow commitSequence
+- Example: 'Add feature implementation', 'Add tests for feature', 'Update documentation'
+
+---
+id: 999-git-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Git Commit Prefix
+
+## Action
+
+Start the commit message with a prefix such as 'feat', 'fix', 'chore', 'ci', or '[bot]'
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Examples: 'feat: ...', 'fix: ...', '[bot] ...'
+
+---
+id: 999-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Git Commit Length
+
+## Action
+
+Keep commit messages concise, around 17 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Examples: short commit messages
+
+---
+id: 999-workflow-bump-deps
+trigger: "When dependencies or type definitions need updating"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Workflow Bump Deps
+
+## Action
+
+Update @types/* .d.ts files and/or tavern_sync.mjs, then update package.json and pnpm-lock.yaml, and commit with a message containing 'Bump deps'
+
+## Evidence
+
+- bump-dependencies workflow
+- Example commit: 'Bump deps'
+- Pattern in files: package.json, pnpm-lock.yaml, @types/*
+
+---
+id: 999-workflow-bot-bundle
+trigger: "When built/dist artifacts need updating after code or config changes"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Workflow Bot Bundle
+
+## Action
+
+Build project, commit updated dist/ files, and use commit message '[bot] bundle'
+
+## Evidence
+
+- bot-bundle-artifacts workflow
+- Example commit: '[bot] bundle'
+- Pattern in files: dist/*
+
+---
+id: 999-workflow-update-character-card
+trigger: "When adding or updating features for the example character card"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Workflow Update Character Card
+
+## Action
+
+Edit files in 示例/角色卡示例/, optionally update util/common.ts, and commit changes
+
+## Evidence
+
+- update-example-character-card workflow
+- Pattern in files: 示例/角色卡示例/*, util/common.ts
+
+---
+id: 999-workflow-update-build-config
+trigger: "When changing build or CI configuration"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Workflow Update Build Config
+
+## Action
+
+Edit webpack.config.ts or .github/workflows/bundle.yaml and commit changes
+
+## Evidence
+
+- update-build-config workflow
+- Pattern in files: webpack.config.ts, .github/workflows/bundle.yaml
+
+---
+id: 999-workflow-update-prompt-docs
+trigger: "When refining prompts, rules, or documentation for AI/codegen tools"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: kui123456789/999
+---
+
+# 999 Workflow Update Prompt Docs
+
+## Action
+
+Edit .cursor/rules/*.mdc or similar files, optionally update other rule/prompt files, and commit changes
+
+## Evidence
+
+- update-prompt-or-rule-docs workflow
+- Pattern in files: .cursor/rules/*.mdc, .augment/rules/*.md, etc.
+
